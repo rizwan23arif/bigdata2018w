@@ -1,6 +1,6 @@
 ## Question 1
 
-*Pairs implementation*: For pairs implementation, I have taken 2 MapReduce jobs. First MapReduce is used to find the total number of unique words encountered and it's count. It emits the pair(WORD, ONE) for every unique words encountered. Second MapReduce handles the co-occurrence of pair of words and calculates the PMI and the number of times it has co-occurred.(word1, word2)->(PMI, no. of times pair occurs)
+**Pairs implementation**: For pairs implementation, I have taken 2 MapReduce jobs. First MapReduce is used to find the total number of unique words encountered and it's count. It emits the pair(WORD, ONE) for every unique words encountered. Second MapReduce handles the co-occurrence of pair of words and calculates the PMI and the number of times it has co-occurred.(word1, word2)->(PMI, no. of times pair occurs)
 
 Input records: Each Mapper takes first 40 words of a sentence.
 
@@ -8,7 +8,7 @@ Intermediate key-value pairs: List of (Key, Value) pairs, where the Key is the u
 
 Final Output Records: List of (Key, Value) pairs, where Key is the co-occurring pair (word1, word2) and the value is also a pair (PMI, co-occurrence count)
 
-*Stripes implementation*: For Stripes implementation too, I have taken 2 MapReduce jobs. First MapReduce is used to find the total number of unique words encountered and it's count. It emits the pair(WORD, ONE) for every unique words encountered. Second MapReduce handles the co-occurrence of pair of words and calculates the PMI and the number of times it has co-occurred. (word1, word2)->(PMI, no. of times pair occurs) where word1 is a Key and work2 is a MAP,each key of MAP is the co-occurrence word, word2 and value of that key is (PMI, count) corresponding to that co-occurrence word.
+**Stripes implementation**: For Stripes implementation too, I have taken 2 MapReduce jobs. First MapReduce is used to find the total number of unique words encountered and it's count. It emits the pair(WORD, ONE) for every unique words encountered. Second MapReduce handles the co-occurrence of pair of words and calculates the PMI and the number of times it has co-occurred. (word1, word2)->(PMI, no. of times pair occurs) where word1 is a Key and work2 is a MAP,each key of MAP is the co-occurrence word, word2 and value of that key is (PMI, count) corresponding to that co-occurrence word.
 
 Input records: Each Mapper takes first 40 words of a sentence.
 
