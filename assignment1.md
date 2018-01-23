@@ -17,7 +17,7 @@ Environment: linux.student.cs.uwaterloo.ca
 ```
 ## Question 4
 ```
-distinct PMI pairs (Using -threshold 10):
+Distinct PMI pairs (Using -threshold 10):
 77198  308792 2327792
 ```
 ## Question 5
@@ -26,11 +26,13 @@ The pair(s) (x, y) with the highest PMI (Using -threshold 10):
 (maine, anjou)  (3.6331422, 12)
 (anjou, maine)  (3.6331422, 12)
 
-The pair(s) with the lowest (negative) PMI (Using -threshold 10): 
+The pair(s) (x, y) with the lowest (negative) PMI (Using -threshold 10): 
 (thy, you)      (-1.5303967, 11)
 (you, thy)      (-1.5303967, 11)
 
-Incomplete, have to write a sentence each
+The probability of seeing the word 'maine' having seen the word 'anjou' in the first 40 words of the same line is high, which gives them the higher PMI. In other words, the co-occurence of 'maine' and 'anjou' is relatively closer than the times they occured individually in the line. 
+
+The reasoning for the lowest PMI of the pair (thy, you) goes the opposite. However, in both the cases of high PMI and low PMI, we can have some knowledge of the other word given one word has been seen.
 ```
 ## Question 6
 ```
