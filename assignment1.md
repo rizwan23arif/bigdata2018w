@@ -1,5 +1,5 @@
 ## Question 1
-####
+
 Pairs implementation: For pairs implementation, I have taken 2 MapReduce jobs. First MapReduce is used to find the total number of unique words encountered and it's count. It emits the pair(WORD, ONE) for every unique words encountered. Second MapReduce handles the co-occurrence of pair of words and calculates the PMI and the number of times it has co-occurred.(word1, word2)->(PMI, no. of times pair occurs)
 Input records: Each Mapper takes first 40 words of a sentence.
 Intermediate key-value pairs: (Key, Value) pair, where the Key is the unique word and the value is the count of that word.
@@ -9,7 +9,7 @@ Stripes implementation: For Stripes implementation too, I have taken 2 MapReduce
 Input records: Each Mapper takes first 40 words of a sentence.
 Intermediate key-value pairs: (Key, Value) pair, where the Key is the unique word and the value is the count of that word.
 Final Output Records: (Key, Value) pair, where Key is a word, say word1 and the value is a HashMap, where the Key of the HashMap is a co-occurring word, say word2 and the value is (PMI, co-occurrence count).
-####
+
 ## Question 2
 ```
 Running time of the complete pairs implementation: 21.392 s
@@ -38,11 +38,12 @@ The pair(s) (x, y) with the highest PMI (Using -threshold 10):
 The pair(s) (x, y) with the lowest (negative) PMI (Using -threshold 10): 
 (thy, you)      (-1.5303967, 11)
 (you, thy)      (-1.5303967, 11)
+```
 
 The probability of seeing the word 'maine' having seen the word 'anjou' in the first 40 words of the same line is high, which gives them the higher PMI. In other words, the co-occurence of 'maine' and 'anjou' is relatively closer than the times they occured individually in the line. 
 
 The reasoning for the lowest PMI of the pair (thy, you) goes the opposite. However, in both the cases of high PMI and low PMI, we can have some knowledge of the other word given one word has been seen.
-```
+
 ## Question 6
 ```
 Three words having the highest PMI with "tears" (using threshold 10):
