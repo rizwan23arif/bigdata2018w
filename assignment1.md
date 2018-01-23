@@ -3,22 +3,62 @@
 ```
 ## Question 2
 ```
+Running time of the complete pairs implementation: 21.392 s
+Running time of the complete stripes implementation: 8.446 s
+
+Environment: linux.student.cs.uwaterloo.ca
 ```
 ## Question 3
 ```
+Running time of the complete pairs implementation(Without Combiner): 25.399 s
+Running time of the complete stripes implementation(Withour Combiner): 8.401 s
+
+Environment: linux.student.cs.uwaterloo.ca
 ```
 ## Question 4
 ```
+distinct PMI pairs (Using -threshold 10):
+77198  308792 2327792
 ```
 ## Question 5
 ```
+The pair(s) (x, y) with the highest PMI (Using -threshold 10): 
+(maine, anjou)  (3.6331422, 12)
+(anjou, maine)  (3.6331422, 12)
+
+The pair(s) with the lowest (negative) PMI (Using -threshold 10): 
+(thy, you)      (-1.5303967, 11)
+(you, thy)      (-1.5303967, 11)
+
+Incomplete, have to write a sentence each
 ```
 ## Question 6
 ```
+Three words having the highest PMI with "tears" (using threshold 10):
+(tears, shed)   (2.1117902, 15)
+(tears, salt)   (2.052812, 11)
+(tears, eyes)   (1.165167, 23)
+
+Three words having the highest PMI with "death" (using threshold 10):
+(death, father's)       (1.120252, 21)
+(death, die)            (0.7541594, 18)
+(death, life)           (0.7381346, 31)
 ```
 ## Question 7
 ```
+Five words that have the highest PMI with "hockey" (using threshold 50):
+(hockey, defenceman)    (2.4031334, 147)
+(hockey, winger)        (2.3864822, 185)
+(hockey, goaltender)    (2.2435493, 198)
+(hockey, ice)           (2.1956174, 2002)
+(hockey, nhl)           (2.2435493, 937)
 ```
 ## Question 8
 ```
+Five words that have the highest PMI with "data" (using threshold 50):
+(data, storage)         (1.9805377, 100)
+(data, database)        (1.9001268, 97)
+(data, disk)            (1.7944009, 67)
+(data, stored)          (1.7885251, 65)
+(data, processing)      (1.6491873, 57)
 ```
