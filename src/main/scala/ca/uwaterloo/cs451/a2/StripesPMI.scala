@@ -44,7 +44,7 @@ object StripesPMI extends Tokenizer {
     val uniqueWords = textFile
       .flatMap(line => {
         val tokens = tokenize(line)
-		if (tokens.length > 40) tokens.slice(0,40) else tokens
+	if (tokens.length > 40) tokens.slice(0,40) else tokens
         if (tokens.length > 1) tokens.distinct.map(word => (word, 1)) else List().map(word => (word, 1))
       })
       .reduceByKey(_ + _).collectAsMap()
@@ -54,7 +54,7 @@ object StripesPMI extends Tokenizer {
     val pairs = textFile
       .flatMap(line => {
         val tokens = tokenize(line)
-		if (tokens.length > 40) tokens.slice(0,40) else tokens
+	if (tokens.length > 40) tokens.slice(0,40) else tokens
         if (tokens.length > 1) tokens.distinct.flatMap(a => tokens.map(b => (a, b))).distinct.filter(a => a._1 != a._2)
         else List().flatMap(a => tokens.map(b => (a, b))).distinct.filter(a => a._1 != a._2)
       })
