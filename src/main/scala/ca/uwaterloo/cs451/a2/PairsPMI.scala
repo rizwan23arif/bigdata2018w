@@ -66,7 +66,7 @@ object PairsPMI extends Tokenizer {
 
     val split = PMIpair.map(PMIpair => (PMIpair._1._1, PMIpair._1._2, PMIpair._2))
     val m = split.map(split => (split._1 + "," + split._2, hash_map.value(split._1), hash_map.value(split._2), split._3))
-    val result = m.map(m => (("(" + m._1 + ")" + " " + "(" + scala.math.log10((m._4 * N).toDouble / (m._2).toDouble / (m._3).toDouble)), m._4 + ")"))
+    val result = m.map(m => (("(" + m._1 + ")\t" + "(" + scala.math.log10((m._4 * N).toDouble / (m._2).toDouble / (m._3).toDouble)), m._4 + ")"))
 
     result.saveAsTextFile(args.output())
   }

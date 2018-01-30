@@ -58,7 +58,7 @@ object ComputeBigramRelativeFrequencyPairs extends Tokenizer {
 
     val count = counts.map(counts => (counts._1.split(" ")(0), counts._1.split(" ")(1) + " " + counts._2))
 	val items = count.join(wordCount)
-	val result = items.map(items => (("((" + items._1 + "," + items._2._1.split(" ")(0) + ")") + " " + (items._2._1.split(" ")(1).toDouble / items._2._2) + ")"))
+	val result = items.map(items => (("((" + items._1 + "," + items._2._1.split(" ")(0) + ")\t") + (items._2._1.split(" ")(1).toDouble / items._2._2) + ")"))
 
     result.saveAsTextFile(args.output())
   }
