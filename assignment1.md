@@ -65,18 +65,18 @@ Three words having the highest PMI with "death" (using threshold 10):
 ## Question 7
 ```
 Five words that have the highest PMI with "hockey" (using threshold 50):
-(hockey, defenceman)    (2.4031334, 147)
-(hockey, winger)        (2.3864822, 185)
-(hockey, goaltender)    (2.2435493, 198)
-(hockey, ice)           (2.1956174, 2002)
-(hockey, nhl)           (2.2435493, 937)
+(hockey, defenceman)    (2.4030268, 147)
+(hockey, winger)        (2.3863757, 185)
+(hockey, goaltender)    (2.2434428, 198)
+(hockey, ice)           (2.195185, 2002)
+(hockey, nhl)           (1.9864639, 940)
 ```
 ## Question 8
 ```
 Five words that have the highest PMI with "data" (using threshold 50):
-(data, storage)         (1.9805377, 100)
-(data, database)        (1.9001268, 97)
-(data, disk)            (1.7944009, 67)
-(data, stored)          (1.7885251, 65)
-(data, processing)      (1.6491873, 57)
+(data, storage)         (1.9796829, 100)
+(data, database)        (1.8992721, 97)
+(data, disk)            (1.7935462, 67)
+(data, stored)          (1.7868547, 65)
+(data, processing)      (1.6476576, 57)
 ```
