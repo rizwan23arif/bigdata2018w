@@ -4,9 +4,11 @@
 3.8M    cs451-lintool-a3-index-shakespeare
 
 Query: outrageous fortune AND
+
 1073319     The slings and arrows of outrageous fortune
 
 Query: white red OR rose AND pluck AND
+
 1713274     From off this brier pluck a white rose with me.
 1713428     Pluck a red rose from off this thorn with me.
 1713566     I pluck this white rose with Plantagenet.
@@ -21,6 +23,7 @@ Query: white red OR rose AND pluck AND
 ## Question 3
 ```
 Query: waterloo stanford OR cheriton AND
+
 219657945       V (operating system).0000       The V operating system -LRB- sometimes written V-Syste...
 321488086       Google.0032     At least three other angel investors invested in 1998 : Amazon.com f...
 369815664       List of civil parishes in Hampshire.0012        * Badger Farm 26 * Beauworth 27 * Bight...
@@ -37,7 +40,8 @@ Query: waterloo stanford OR cheriton AND
 ## Question 4
 ```
 Query: big data AND hadoop spark OR AND
-7309537 Computer security.0123  Some organizations are turning to big data platforms , su...
+
+7309537         Computer security.0123  Some organizations are turning to big data platforms , su...
 139647920       Performance tuning.0032 Configuration optimization Modern software systems , e.g...
 1231730902      Security information and event management.0007  Organizations are turning to big ...
 1333222276      Kuruvilla.0008  IT Analyst , City Of Dallas , Texas , USA ** Jacob Kuruvilla -LRB...
