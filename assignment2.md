@@ -1,6 +1,6 @@
 ## Output of Assignment 2
 
-# On Linux Environment
+### On Linux Environment
 
 ***Bigram pairs:***
 ```
