@@ -1,5 +1,7 @@
 ## Output of Assignment 2
 
+# On Linux Environment
+
 ***Bigram pairs:***
 ```
 ((dream,again) 0.02531645569620253)
