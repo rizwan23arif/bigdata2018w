@@ -10,6 +10,7 @@ import org.apache.hadoop.fs._
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
 import org.rogach.scallop._
+import org.apache.spark.Partitioner
 
 class Conf(args: Seq[String]) extends ScallopConf(args) {
   mainOptions = Seq(input, output, reducers)
@@ -17,6 +18,14 @@ class Conf(args: Seq[String]) extends ScallopConf(args) {
   val output = opt[String](descr = "output path", required = true)
   val reducers = opt[Int](descr = "number of reducers", required = false, default = Some(1))
   verify()
+}
+
+class PartitionerHelper(partitions: Int) extends Partitioner {
+  def numPartitions: Int = partitions
+  def getPartition(key: Any) : Int = {
+    val k = key.asInstanceOf[(String, String)]
+    ((k._1.hashCode() & Integer.MAX_VALUE) % numPartitions)
+  }
 }
 
 object ComputeBigramRelativeFrequencyPairs extends Tokenizer {
@@ -40,16 +49,16 @@ object ComputeBigramRelativeFrequencyPairs extends Tokenizer {
       .flatMap(line => {
         val tokens = tokenize(line)
         if (tokens.length > 1) tokens.sliding(2).map(p => p.mkString(" ")).toList 
-		else List()
+		    else List()
       })
       .map(ComputeBigramRelativeFrequencyPairs => (ComputeBigramRelativeFrequencyPairs, 1))
       .reduceByKey(_ + _)
 	  
-	val wc = textFile
+	  val wc = textFile
       .flatMap(line => {
         val tokens = tokenize(line)
         if (tokens.length > 1) tokens.sliding(2).map(p => p.mkString(" ")).toList 
-		else List()
+		    else List()
       })
       .map(pairs => (pairs, 1))
 	  
@@ -57,8 +66,8 @@ object ComputeBigramRelativeFrequencyPairs extends Tokenizer {
       .reduceByKey(_ + _)
 
     val count = counts.map(counts => (counts._1.split(" ")(0), counts._1.split(" ")(1) + " " + counts._2))
-	val items = count.join(wordCount)
-	val result = items.map(items => (("((" + items._1 + "," + items._2._1.split(" ")(0) + ")\t") + (items._2._1.split(" ")(1).toDouble / items._2._2) + ")"))
+	  val items = count.join(wordCount)
+	  val result = items.map(items => (("((" + items._1 + "," + items._2._1.split(" ")(0) + ")\t") + (items._2._1.split(" ")(1).toDouble / items._2._2) + ")"))
 
     result.saveAsTextFile(args.output())
   }
