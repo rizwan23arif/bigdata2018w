@@ -26,20 +26,68 @@ mark 6/6
 mark 6/6
 
 **Test 1:** Does pairs code run on linux.student?
-mark:5/5
+mark:3/5
 
 **Test 2:** Does stripes code run on linux.student?
 mark:5/5
 
 **Test 7 (hidden):** top three pmi's with love/shakespear/linux?
-mark:3/3
+mark:5/3
 
 **Late pentalties**
 
-mark:1
+mark:0.0
+
+
+
+**** Altiscale *****
+
+
+**Test 1:** Does pairs code run on linux.student?
+mark:5/5
+
+**Test 2:** Does stripes code run on linux.student?
+mark:5/5
+
+**Hidden - PAIR
+
+mark:3/3
+
+**Hidden - STRIPE
+
+mark:3/3
+
+**Question 7 - PAIR
+
+mark:2.5/2.5
+
+**Question 7 - STRIPE
+
+mark:2.5/2.5
+
+**Question 8 - PAIR
+
+mark:2.5/2.5
+
+**Question 8 - STRIPE
+
+mark:2.5/2.5
+
+**Provided args usage
+
+mark:2/2
+
+**Combiner implementation/usage
+
+mark:7/7
+
+**Penalty (e.g Minor format issue)
+
+mark: -0/0
+
 **Final grade:**
 
-mark:38/38
+mark:73/73
 
-summary:20648633,RAARIF,rizwan23arif,38
+summary:20648633,RAARIF,rizwan23arif,73
 
