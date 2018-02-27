@@ -39,7 +39,6 @@ Source: 145
 0.03496 2098
 ```
 
-```
 ## Altiscale Output
 ```
 Source: 73273
