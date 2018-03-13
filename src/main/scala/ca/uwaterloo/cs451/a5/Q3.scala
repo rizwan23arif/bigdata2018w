@@ -54,7 +54,7 @@ object Q3 extends {
         val lineitem = lineitemRDD  
           .filter(line => {
             val tokens = line.split("\\|")
-            tokens(10).contains(shipdate)
+            tokens(10).toString.startsWith(shipdate)
           })
           .flatMap(line => { 
             val tokens = line.split("\\|")
@@ -91,7 +91,7 @@ object Q3 extends {
         val supplierHashmapRDD = sc.broadcast(supplier)
         
         val lineitem = lineitemRDD
-          .filter(line => line(10).toString.contains(shipdate))
+          .filter(line => line(10).toString.startsWith(shipdate))
           .flatMap(line => {
               if(partHashmapRDD.value.get(line(1)) != null && supplierHashmapRDD.value.get(line(2)) != null){
                 List((line(0).toString.toInt, partHashmapRDD.value.get(line(1)), supplierHashmapRDD.value.get(line(2))))

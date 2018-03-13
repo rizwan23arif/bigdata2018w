@@ -55,7 +55,7 @@ object Q4 extends {
         val lineitem = lineitemRDD  
           .filter(line => {
             val tokens = line.split("\\|")
-            tokens(10).contains(shipdate)
+            tokens(10).toString.startsWith(shipdate)
           })
           .map(line => {
           val tokens = line.split("\\|")
@@ -115,7 +115,7 @@ object Q4 extends {
         val nationHashmapRDD = sc.broadcast(nation)
         
         val lineitem = lineitemRDD  
-          .filter(line => line(10).toString.contains(shipdate))
+          .filter(line => line(10).toString.startsWith(shipdate))
           .map(line => (line(0), line(10)))
         
         val orders = ordersRDD

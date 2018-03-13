@@ -37,7 +37,7 @@ object Q6 extends {
         val lineitem = lineitemRDD        
           .filter(line => {
             val tokens = line.split("\\|")
-            tokens(10).contains(date)
+            tokens(10).toString.startsWith(date)
           })
           .map(line => {
             val tokens = line.split("\\|")
@@ -81,7 +81,7 @@ object Q6 extends {
         val lineitemRDD = lineitemDF.rdd
         
         val lineitem = lineitemRDD        
-          .filter(line => line(10).toString.contains(date))
+          .filter(line => line(10).toString.startsWith(date))
           .map(line => {
             val l_returnflag = line(8).toString()
             val l_linestatus = line(9).toString()
