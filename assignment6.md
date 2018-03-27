@@ -1,3 +1,5 @@
+Note: All the results have been observed on Altiscale
+
 ## Question 1
 ```
 1. Train and Classify with Group-X
