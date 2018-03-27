@@ -25,5 +25,6 @@ Note: All the results have been observed on Altiscale
 ```
 ## Question 5
 ```
-
+1-ROCA%: 18.90
+1-ROCA%: 17.60
 ```
