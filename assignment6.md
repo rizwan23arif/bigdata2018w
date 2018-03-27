@@ -27,7 +27,7 @@ Note: All the results have been observed on Altiscale
 ```
 Iteration  1: 1-ROCA%: 18.90
 Iteration  2: 1-ROCA%: 17.60
-Iteration  3: 1-ROCA%: 
+Iteration  3: 1-ROCA%: 17.07
 Iteration  4: 1-ROCA%: 
 Iteration  5: 1-ROCA%: 
 Iteration  6: 1-ROCA%: 
