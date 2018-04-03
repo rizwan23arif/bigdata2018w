@@ -1,4 +1,6 @@
 ## Problem 1
+
+find output-* -name "part*" | xargs grep 'all' | sed -E 's/^output-([0-9]+)\/part-[0-9]+/\1/' | sort -n
 ```
 3600000:(all,7396)
 7200000:(all,5780)
@@ -27,6 +29,8 @@
 ```
 
 ## Problem 2
+
+find output-* -name "part*" | xargs grep 'goldman' | sed -E 's/^output-([0-9]+)\/part-[0-9]+/\1/' | sort -n
 ```
 21600000:(goldman,8)
 25200000:(goldman,28)
@@ -47,7 +51,10 @@
 79200000:(goldman,1)
 82800000:(goldman,1)
 86400000:(goldman,1)
+```
 
+find output-* -name "part*" | xargs grep 'citigroup' | sed -E 's/^output-([0-9]+)\/part-[0-9]+/\1/' | sort -n
+```
 3600000:(citigroup,6)
 7200000:(citigroup,2)
 10800000:(citigroup,2)
@@ -75,6 +82,8 @@
 ```
 
 ## Problem 3
+
+cat output/part-*/* | grep "(citigroup" 
 ```
 (citigroup,(1,01200000,0))
 (citigroup,(2,01800000,1))
@@ -234,7 +243,9 @@
 (citigroup,(2,86400000,1))
 (citigroup,(0,9000000,1))
 (citigroup,(0,9600000,0))
-
+```
+cat output/part-*/* | grep "(goldman"
+```
 (goldman,(1,19800000,0))
 (goldman,(1,20400000,1))
 (goldman,(2,21000000,1))
