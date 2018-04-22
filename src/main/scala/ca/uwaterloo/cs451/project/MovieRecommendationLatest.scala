@@ -66,7 +66,7 @@ object MovieRecommendationLatest {
 	  val moviesWithNames = MovieNames()	
 	  
 	  //Printing the recommendations
-      println("\nTop 10 similar movies for " + moviesWithNames(movieID))
+      println("\nTop 10 recommended movies for " + moviesWithNames(movieID))
       for (result <- results) {
         val sim = result._1
         val pair = result._2
