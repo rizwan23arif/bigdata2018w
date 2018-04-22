@@ -24,10 +24,10 @@ Wallace & Gromit: The Best of Aardman Animation (1996)  score: 0.974181612830257
 ## MovieLens Latest Datasets - Small
 
 Query : Give me the top 10 recommended movies for Star Wars (1977)
-'''
+```
 spark-submit --class ca.uwaterloo.cs451.project.MovieRecommendationLatest \
   target/assignments-1.0.jar 260
-'''
+```
 
 Answer :
 ```
