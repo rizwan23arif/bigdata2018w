@@ -1,5 +1,20 @@
 ## MovieLens 100K Dataset
 
+Query : Provide me the top 10 highest rated movies.
+Answer :
+```
+(Star Wars (1977),583)
+(Contact (1997),509)
+(Fargo (1996),508)
+(Return of the Jedi (1983),507)
+(Liar Liar (1997),485)
+(English Patient, The (1996),481)
+(Scream (1996),478)
+(Toy Story (1995),452)
+(Air Force One (1997),431)
+(Independence Day (ID4) (1996),429)
+```
+
 Query : Give me the top 10 recommended movies for Star Wars (1977)
 Note : Star Wars (1977) has a movieID of 50 in 100k dataset
 ```
@@ -24,6 +39,21 @@ Wallace & Gromit: The Best of Aardman Animation (1996)  score: 0.974181612830257
 
 ## MovieLens Latest Datasets - Small
 
+Query : Provide me the top 10 highest rated movies.
+Answer :
+```
+(Forrest Gump (1994),341)
+(Pulp Fiction (1994),324)
+("Shawshank Redemption,311)
+("Silence of the Lambs,304)
+(Star Wars: Episode IV - A New Hope (1977),291)
+(Jurassic Park (1993),274)
+("Matrix,259)
+(Toy Story (1995),247)
+(Schindler's List (1993),244)
+(Terminator 2: Judgment Day (1991),237)
+```
+
 Query : Give me the top 10 recommended movies for Star Wars (1977)
 Note : Star Wars (1977) has a movieID of 260
 ```
@@ -44,6 +74,23 @@ Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981)  
 "Departed       score: 0.9787847893840399       strength: 52
 Platoon (1986)  score: 0.9774131316382156       strength: 55
 "Hunt for Red October   score: 0.9771664798038402       strength: 73
+```
+
+## MovieLens 1M Dataset
+
+Query : Provide me the top 10 highest rated movies.
+Answer :
+```
+(American Beauty (1999),3428)
+(Star Wars: Episode IV - A New Hope (1977),2991)
+(Star Wars: Episode V - The Empire Strikes Back (1980),2990)
+(Star Wars: Episode VI - Return of the Jedi (1983),2883)
+(Jurassic Park (1993),2672)
+(Saving Private Ryan (1998),2653)
+(Terminator 2: Judgment Day (1991),2649)
+(Matrix, The (1999),2590)
+(Back to the Future (1985),2583)
+(Silence of the Lambs, The (1991),2578)
 ```
 
   
